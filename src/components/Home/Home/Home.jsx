@@ -8,8 +8,10 @@ const Home = () => {
   const allNews = useLoaderData()
   const [news, setNews] = useState(allNews)
   const setCategory = (id) =>{
-
-    console.log(id)
+    fetch(`https://dragon-news-server-sagor369.vercel.app/categories/${id}`)
+    .then(res => res.json())
+    .then(data => setNews(data))
+    // console.log(id)
   }
   return (
     <div className="grid grid-cols-4 mt-6 gap-3">
