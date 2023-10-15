@@ -2,6 +2,7 @@ import React from "react";
 import LeftStde from "./LeftStde";
 import { useLoaderData } from "react-router-dom";
 import NewsContainer from "../../Share/NewsContainer/NewsContainer";
+import RightSite from "./RightSite";
 
 const Home = () => {
   const news = useLoaderData()
@@ -17,7 +18,7 @@ const Home = () => {
         }
       </div>
       <div className="col-span-1">
-        <p> right site navbar </p>
+        <RightSite></RightSite>
       </div>
     </div>
   );

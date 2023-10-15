@@ -25,7 +25,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader:()=> fetch('http://localhost:5000/news')
+        loader:()=> fetch('https://dragon-news-server-sagor369.vercel.app/news')
       },
       {
         path: "login",
