@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
-const LeftStde = () => {
+const LeftStde = ({setCategory}) => {
     const [cetagorise , setCetagorise] = useState([])
     useEffect(()=>{
         fetch('https://dragon-news-server-sagor369.vercel.app/categories')
@@ -11,7 +11,9 @@ const LeftStde = () => {
     return (
         <div className='pl-4'>
             {
-                cetagorise.map(ca => <p key={ca.id} className='mb-2'> <NavLink to={`/category/${ca.id}`}>{ca.name}</NavLink></p>)
+                cetagorise.map(ca => <p
+                     key={ca.id} className='mb-2'> <button onClick= {() =>setCategory(ca.id)}>{ca.name}</button>
+                     </p>)
             }
         </div>
     );
