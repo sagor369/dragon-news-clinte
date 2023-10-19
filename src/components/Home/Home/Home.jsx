@@ -14,8 +14,8 @@ const Home = () => {
     // console.log(id)
   }
   return (
-    <div className="grid grid-cols-4 mt-6 gap-3">
-      <div className="col-span-1">
+    <div className="grid grid-cols-4 mt-6 gap-3 ">
+      <div className="col-span-1 ">
         <h2 className="font-bold mb-4 ">All Caterogy</h2>
         <LeftStde setCategory = {setCategory}></LeftStde>
       </div>
