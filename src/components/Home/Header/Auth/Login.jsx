@@ -4,16 +4,16 @@ import { AuthContext } from "../../../PrivetRoute/PriveteRoute";
 const Login = () => {
     const {loginHandle} = useContext(AuthContext)
     const handleLogin = event =>{
-        console.log('ami')
+        // console.log('ami')
         event.preventDefault()
         const from = event.target 
         const email = from.email.value 
         const password = from.password.value 
-        console.log(email, password)
+        // console.log(email, password)
         loginHandle(email, password)
         .then(result =>{
             const user = result.user
-            console.log(user)
+            // console.log(user)
         })
         .catch(error =>{
             const errorCode = error.code 

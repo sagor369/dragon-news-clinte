@@ -11,16 +11,16 @@ const Register = () => {
         const email = from.email.value 
         const password = from.password.value 
 
-        console.log(email, password, )
+        // console.log(email, password, )
         registerHandle(email, password)
         .then(result =>{
             const user = result.user
-            console.log(user)
+            // console.log(user)
         })
         .catch(error =>{
             const errorCode = error.code 
             const errorMessage = error.message 
-            console.log(errorCode, errorMessage)
+            // console.log(errorCode, errorMessage)
         })
     }
     return (
