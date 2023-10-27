@@ -5,6 +5,7 @@ import app from '../../firebase/firebase.confige';
 export const AuthContext = createContext()
 const auth = getAuth(app)
 const [user , setUser ]= useState()
+const [isLoading, setLoading] = useState(false)
 const display = 'sahed'
 const loginHandle = (email, password)=>{
     return createUserWithEmailAndPassword(auth, email, password)
