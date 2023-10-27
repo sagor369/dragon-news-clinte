@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 import logo from "../../../assets/logo.png";
 import moment from "moment/moment";
 import { FaUser } from "react-icons/fa";
-import {user} from "Auth"
+import { AuthContext } from "../../PrivetRoute/PriveteRoute";
 
 const Header = () => {
-  const {user} = useContext
+  const {user} = useContext(AuthContext)
   
   return (
     <div className=" relative">

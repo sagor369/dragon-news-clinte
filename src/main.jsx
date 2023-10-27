@@ -9,15 +9,7 @@ import Login from "./components/Home/Header/Auth/Login.jsx";
 import Register from "./components/Home/Header/Auth/Register.jsx";
 import PriveteRoute from "./components/PrivetRoute/PriveteRoute.jsx";
 const router = createBrowserRouter([
-  // {
-  //   path:'/category:id',
-  //   element:<Navigate to='/'></Navigate>,
-  //   children:[
-  //     {
-
-  //     }
-  //   ]
-  // },
+  
   {
     path: "/",
     element: <Layout></Layout>,
