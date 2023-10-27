@@ -8,14 +8,18 @@ const [user , setUser ]= useState()
 const [isLoading, setLoading] = useState(false)
 const display = 'sahed'
 const loginHandle = (email, password)=>{
+    setLoading(false)
     return createUserWithEmailAndPassword(auth, email, password)
 }
 const registerHandle = (email, password)=>{
+    setLoading(false)
     return createUserWithEmailAndPassword(auth, email, password)
 }
 useEffect(()=>{
+    setLoading(true)
     onAuthStateChanged(auth , users =>{
         setUser(users)
+        setLoading(true)
 
     })
 },[])
